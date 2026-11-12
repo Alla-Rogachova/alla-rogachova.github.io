@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amanecer · Beachfront apartments · Torre la Sal — Alla Rogachova</title>
+<meta name="description" content="Amanecer 1, 2, 3 — new beachfront apartments on Torre la Sal beach (Cabanes, Costa del Azahar). 2–3 bedrooms, fully furnished, parking included. Available units and prices.">
+<meta property="og:title" content="Amanecer · Beachfront apartments · Torre la Sal">
+<meta property="og:description" content="2–3 bedroom apartments on the beach, fully furnished, parking included. Available units & prices.">
+<meta property="og:image" content="https://alla-rogachova.github.io/amanecer/img/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sea:#0f4c5c; --sea-2:#1f6f82; --sand:#f4ede3; --sand-2:#e9dfd0; --ink:#1d2a30; --muted:#5f6d73;
+  --line:#e3dccf; --white:#fff; --accent:#d9893b; --wa:#1fa855; --tg:#2a9fd8;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--white);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:.2px}
+h2{font-size:clamp(30px,5vw,44px);margin-bottom:10px;color:var(--sea)}
+.kicker{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+.lead{color:var(--muted);max-width:640px}
+section{padding:72px 0}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:600;color:var(--sea);text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:-2px}
+.langs{display:flex;gap:4px;background:var(--sand);padding:4px;border-radius:999px}
+.langs button{border:0;background:transparent;font:600 12px Inter,sans-serif;padding:7px 10px;border-radius:999px;cursor:pointer;color:var(--muted)}
+.langs button.on{background:var(--sea);color:#fff}
+
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,40,.0) 20%,rgba(10,30,40,.45) 45%,rgba(10,30,40,.85) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:56px;width:100%}
+.hero .kicker{color:#ffd9ae}
+.hero h1{font-size:clamp(46px,9vw,92px);margin-bottom:12px}
+.hero p{font-size:clamp(16px,2.2vw,19px);max-width:620px;opacity:.95}
+.from{display:inline-flex;align-items:baseline;gap:8px;margin:22px 0 24px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:10px 16px;border-radius:12px;backdrop-filter:blur(6px)}
+.from b{font-family:"Cormorant Garamond",serif;font-size:32px;font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:13px 20px;border-radius:999px;border:0;cursor:pointer}
+.btn svg{width:18px;height:18px}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-light{background:#fff;color:var(--sea)}
+.btn-ghost{background:transparent;color:var(--sea);border:1.5px solid var(--sea)}
+
+/* facts */
+.facts{background:var(--sand);padding:34px 0}
+.facts .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fact b{display:block;font-family:"Cormorant Garamond",serif;font-size:30px;color:var(--sea);line-height:1}
+.fact span{font-size:13.5px;color:var(--muted)}
+@media(max-width:760px){.facts .grid{grid-template-columns:repeat(2,1fr)}}
+
+/* about */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.about ul{list-style:none;margin-top:20px;display:grid;gap:10px}
+.about li{display:flex;gap:10px;align-items:flex-start}
+.about li:before{content:"";flex:0 0 8px;height:8px;margin-top:8px;border-radius:50%;background:var(--accent)}
+.about .pic{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.about .pic img{width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.about{grid-template-columns:1fr}.about .pic{aspect-ratio:4/3}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:10px;margin-top:28px}
+.gal figure{border-radius:12px;overflow:hidden;cursor:zoom-in;background:var(--sand)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal .w2{grid-column:span 2}.gal .h2{grid-row:span 2}
+@media(max-width:760px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}}
+
+/* availability */
+.avail{background:var(--sand)}
+.tabs{display:flex;gap:8px;margin:26px 0 18px;flex-wrap:wrap}
+.tab{border:1.5px solid var(--sea);background:transparent;color:var(--sea);font:600 14px Inter,sans-serif;padding:10px 16px;border-radius:999px;cursor:pointer}
+.tab.on{background:var(--sea);color:#fff}
+.tab em{font-style:normal;font-weight:500;opacity:.75;margin-left:4px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{border:1px solid var(--line);background:#fff;font:500 13px Inter,sans-serif;padding:8px 12px;border-radius:999px;cursor:pointer;color:var(--ink)}
+.chip.on{border-color:var(--accent);background:#fff4e8;color:#8a4c12}
+.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.unit{background:#fff;border-radius:14px;padding:18px;border:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.unit .head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.unit .no{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--sea);line-height:1}
+.unit .no small{display:block;font-family:Inter,sans-serif;font-size:12px;color:var(--muted);margin-top:4px}
+.badge{font-size:11px;font-weight:600;background:#e7f5ec;color:#167a3f;padding:4px 8px;border-radius:999px;white-space:nowrap}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;font-size:12.5px;color:var(--muted)}
+.specs b{display:block;color:var(--ink);font-size:15px;font-weight:600}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price b{font-size:22px;font-weight:600;color:var(--ink)}
+.price s{color:var(--muted);font-size:13px}
+.price .off{font-size:11px;font-weight:700;color:#fff;background:var(--accent);padding:3px 7px;border-radius:6px}
+.unit .acts{display:flex;gap:8px;margin-top:auto}
+.unit .acts a,.unit .acts button{flex:1;text-align:center;text-decoration:none;font:600 13px Inter,sans-serif;padding:10px;border-radius:10px;border:0;cursor:pointer}
+.unit .acts .ask{background:var(--wa);color:#fff}
+.unit .acts .plan{background:var(--sand);color:var(--sea)}
+.unit .acts .plan[disabled]{opacity:.5;cursor:default}
+.note{font-size:12.5px;color:var(--muted);margin-top:18px}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.plancard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;cursor:zoom-in}
+.plancard img{aspect-ratio:4/3;object-fit:contain;background:#fff;padding:8px;width:100%}
+.plancard div{padding:14px 16px;border-top:1px solid var(--line)}
+.plancard h3{font-size:24px;color:var(--sea)}
+.plancard p{font-size:13px;color:var(--muted)}
+@media(max-width:860px){.plans{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.plans{grid-template-columns:1fr}}
+
+/* included */
+.inc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.incbox{background:var(--sand);border-radius:14px;padding:22px}
+.incbox h3{font-size:24px;color:var(--sea);margin-bottom:10px}
+.incbox ul{list-style:none;display:grid;gap:7px;font-size:14.5px}
+.incbox li{padding-left:18px;position:relative}
+.incbox li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+@media(max-width:860px){.inc{grid-template-columns:1fr}}
+
+/* location */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.dist{display:grid;gap:12px;margin-top:22px}
+.dist div{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:10px;gap:12px}
+.dist b{color:var(--sea);white-space:nowrap}
+.loc .pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.loc .pics img{border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%}
+.loc .pics img:first-child{grid-column:span 2;aspect-ratio:2/1}
+.map{margin-top:18px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.map iframe{width:100%;height:280px;border:0;display:block}
+@media(max-width:860px){.loc{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--sea);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .lead{color:rgba(255,255,255,.8);margin:0 auto 26px}
+.contact .btns{justify-content:center}
+.btn-tg{background:var(--tg);color:#fff}
+.btn-out{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+.agent{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:22px}
+.agent .av{width:58px;height:58px;border-radius:50%;background:#ffffff22;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:26px;border:1px solid #ffffff55}
+.agent b{display:block;font-size:17px;text-align:left}
+.agent span{font-size:13px;opacity:.8}
+footer{padding:26px 0 90px;font-size:11.5px;color:var(--muted);background:#fff}
+
+/* floating wa */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.fab svg{width:30px;height:30px;fill:#fff}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(8,18,24,.94);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:88vh;max-width:96vw;border-radius:8px;background:#fff}
+.lb button{position:absolute;top:14px;right:16px;background:#ffffff22;color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer}
+.lb .nav{top:50%;transform:translateY(-50%)}
+.lb .prev{left:12px;right:auto}.lb .next{right:12px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../">Alla Rogachova<small data-t="role">Real estate · Spain</small></a>
+    <div class="langs" id="langs">
+      <button data-l="en">EN</button><button data-l="es">ES</button><button data-l="ru">RU</button><button data-l="uk">UA</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <img src="img/hero.jpg" alt="Amanecer — view to Torre la Sal beach">
+  <div class="wrap">
+    <div class="kicker" data-t="heroKicker">Torre la Sal beach · Cabanes · Costa del Azahar</div>
+    <h1>Amanecer</h1>
+    <p data-t="heroSub">New beachfront apartments with 2 and 3 bedrooms — delivered fully furnished and equipped, with parking included.</p>
+    <div class="from"><span data-t="from">from</span> <b id="minPrice">—</b></div>
+    <div class="btns">
+      <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg><span data-t="ctaWa">Ask on WhatsApp</span></a>
+      <a class="btn btn-light" href="#available" data-t="ctaUnits">See available apartments</a>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap grid">
+    <div class="fact"><b data-t="f1b">1st line</b><span data-t="f1">right on the beach</span></div>
+    <div class="fact"><b>2–3</b><span data-t="f2">bedrooms · 2 bathrooms · terrace</span></div>
+    <div class="fact"><b>100%</b><span data-t="f3">furnished & equipped</span></div>
+    <div class="fact"><b>P</b><span data-t="f4">parking space included in price</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <div class="kicker" data-t="aboutK">The project</div>
+      <h2 data-t="aboutH">Wake up facing the Mediterranean</h2>
+      <p class="lead" data-t="aboutP">Amanecer is a residential complex of three buildings on Torre la Sal beach — one of the best family beaches on the coast, surrounded by protected natural areas. Next door is Magic World / Marina d'Or with water parks, restaurants and Europe's largest sea-water spa.</p>
+      <ul>
+        <li data-t="a1">Pool with separate adults' and children's areas, LED lighting and 3 hydromassage spas</li>
+        <li data-t="a2">Social lounge for residents and landscaped pedestrian area</li>
+        <li data-t="a3">Lobby with 3 lifts, underground and ground-floor parking, EV charging pre-installation</li>
+        <li data-t="a4">Air conditioning (hot/cold), aerothermal hot water, motorised blinds, double glazing</li>
+        <li data-t="a5">Apartments are handed over with furniture, appliances, TVs and kitchenware — ready to move in or rent out</li>
+      </ul>
+    </div>
+    <div class="pic"><img src="img/terrace.jpg" alt="Terrace with sea view" loading="lazy"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker" data-t="galK">Gallery</div>
+    <h2 data-t="galH">Life at Amanecer</h2>
+    <div class="gal" id="gal">
+      <figure class="w2 h2"><img src="img/pool-spa.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/living.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/kitchen.jpg" alt="" loading="lazy"></figure>
+      <figure class="w2"><img src="img/building.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/social.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/lobby.jpg" alt="" loading="lazy"></figure>
+      <figure class="w2"><img src="img/aerial.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/pool-view.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/lounge.jpg" alt="" loading="lazy"></figure>
+      <figure class="w2"><img src="img/coast.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/gardens.jpg" alt="" loading="lazy"></figure>
+      <figure><img src="img/beach.jpg" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="avail" id="available">
+  <div class="wrap">
+    <div class="kicker" data-t="avK">Availability & prices</div>
+    <h2 data-t="avH">Available apartments</h2>
+    <p class="lead" data-t="avP">Current offer with the 10% promotion. Prices include a parking space.</p>
+    <div class="tabs" id="tabs"></div>
+    <div class="filters" id="filters"></div>
+    <div class="units" id="units"></div>
+    <p class="note" data-t="avNote">Prices and availability as of 12.11.2026 and may change — please confirm with me before booking. m² — built area.</p>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <div class="kicker" data-t="plK">Floor plans</div>
+    <h2 data-t="plH">Apartment layouts · Amanecer 1</h2>
+    <p class="lead" data-t="plP">Tap a plan to enlarge. Layouts for Amanecer 2 and 3 — on request.</p>
+    <div class="plans" id="planGrid"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker" data-t="incK">Included in the price</div>
+    <h2 data-t="incH">Ready to move in</h2>
+    <div class="inc">
+      <div class="incbox"><h3 data-t="i1h">Furniture</h3><ul>
+        <li data-t="i1a">Sofa bed, coffee table, dining table with 6 chairs</li>
+        <li data-t="i1b">Double bed 150 cm with storage base and bedside tables</li>
+        <li data-t="i1c">Single beds 90 cm in the other bedrooms</li>
+        <li data-t="i1d">Terrace: table with 4 chairs, 2-seater sofa and coffee table</li>
+        <li data-t="i1e">Built-in wardrobes with safe in the master bedroom</li>
+      </ul></div>
+      <div class="incbox"><h3 data-t="i2h">Kitchen & appliances</h3><ul>
+        <li data-t="i2a">Induction hob, oven, microwave, extractor hood</li>
+        <li data-t="i2b">Combi fridge-freezer, dishwasher, washer-dryer</li>
+        <li data-t="i2c">Quartz-type worktop</li>
+        <li data-t="i2d">Coffee machine, juicer, blender, cookware set</li>
+      </ul></div>
+      <div class="incbox"><h3 data-t="i3h">Comfort</h3><ul>
+        <li data-t="i3a">42" Smart TV in the living room, 32" TV in the master bedroom</li>
+        <li data-t="i3b">Air conditioning hot/cold</li>
+        <li data-t="i3c">Motorised aluminium blinds, double glazing</li>
+        <li data-t="i3d">Lighting, mirrors, bathroom furniture and decor</li>
+        <li data-t="i3e">Video intercom, aerothermal hot water</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="avail" id="location">
+  <div class="wrap loc">
+    <div>
+      <div class="kicker" data-t="locK">Location</div>
+      <h2 data-t="locH">Between Valencia and Barcelona</h2>
+      <p class="lead" data-t="locP">Torre la Sal beach (Ribera de Cabanes), next to Oropesa del Mar and Magic World / Marina d'Or — over 300 sunny days a year.</p>
+      <div class="dist">
+        <div><span data-t="d1">Beach</span><b data-t="d1v">first line</b></div>
+        <div><span data-t="d2">Oropesa train station (AVE)</span><b>5 min</b></div>
+        <div><span data-t="d3">Castellón airport</span><b>20 min</b></div>
+        <div><span data-t="d4">Valencia airport</span><b>75 min</b></div>
+        <div><span data-t="d5">Magic World / Marina d'Or, sea-water spa</span><b data-t="d5v">next door</b></div>
+      </div>
+      <div class="map"><iframe loading="lazy" src="https://www.google.com/maps?q=Playa+Torre+la+Sal,+Cabanes,+Castell%C3%B3n&z=13&output=embed" title="Map"></iframe></div>
+    </div>
+    <div class="pics">
+      <img src="img/marinador.jpg" alt="" loading="lazy">
+      <img src="img/spa.jpg" alt="" loading="lazy">
+      <img src="img/waterpark.jpg" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="agent"><div class="av">AR</div><div><b>Alla Rogachova</b><span data-t="agentRole">Your real estate agent · Valencia</span></div></div>
+    <h2 data-t="cH">Book a viewing or ask a question</h2>
+    <p class="lead" data-t="cP">I'll send current availability, payment terms and arrange a visit to the show flat. I speak English, Spanish, Russian and Ukrainian.</p>
+    <div class="btns">
+      <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-tg" href="https://t.me/+380663055318" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn btn-out" href="tel:+34645659523">+34 645 659 523</a>
+      <a class="btn btn-out" href="mailto:rogachova.alla@gmail.com">rogachova.alla@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap" data-t="disc">Plans, renders and photos are for information only and are not contractually binding; furniture and decoration may be replaced by items of similar quality. Prices include VAT-free base as published by the developer; taxes and costs of purchase are paid separately. Developer: Inseryal S.L. (Marina d'Or group).</div></footer>
+
+<a class="fab wa-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
+
+<div class="lb" id="lb"><button class="x" aria-label="Close">✕</button><button class="nav prev" aria-label="Previous">‹</button><img alt=""><button class="nav next" aria-label="Next">›</button></div>
+
+<script>
+const PHONE='34645659523';
+/* [floor, door, type, bedrooms, m2 interior, m2 terrace, m2 total, list price, promo price] — garage included */
+const DATA={
+  'Amanecer 1':[
+    [1,4,'A2',2,61.1,17.3,78.4,285332,256799],
+    [3,29,'A2',2,61.1,17.3,78.4,281912,253721]
+  ],
+  'Amanecer 2':[
+    [null,1,'B4S',2,73.33,35.93,109.26,411093,369984],
+    [null,2,'B3S',2,62.12,19.48,81.6,297455,267710],
+    [null,3,'C1',3,74.73,22.12,96.85,315214,283693],
+    [null,4,'C2',3,74.49,22.07,96.56,299604,269644],
+    [null,6,'B3N',2,62.12,19.48,81.6,284963,256467],
+    [null,7,'B4N',2,73.33,35.93,109.26,398490,358641],
+    [null,14,'C3',2,61.14,17.26,78.4,321984,289786],
+    [null,29,'C3',3,80.54,26.59,107.13,327132,294419],
+    [null,59,'C3',3,80.54,26.59,107.13,337747,303972]
+  ],
+  'Amanecer 3':[
+    [1,173,'B6S',2,76.1,37.75,113.85,338918,305026],
+    [1,174,'B6M',2,76.1,37.75,113.85,319496,287546],
+    [1,175,'C5',3,89,41.7,130.7,333300,299970],
+    [1,176,'B6N',2,75.8,37.65,113.45,357625,321863],
+    [2,177,'B6S',2,76.1,37.75,113.85,343773,309396],
+    [2,179,'C5',3,89,41.7,130.7,340860,306774],
+    [2,180,'B6N',2,75.8,37.65,113.45,363196,326876],
+    [3,182,'B6M',2,76.1,37.75,113.85,329207,296286],
+    [3,183,'C5',3,89,41.7,130.7,346687,312018],
+    [4,186,'B6M',2,76.1,37.75,113.85,333285,299957],
+    [5,190,'B6M',2,76.1,37.75,113.85,338918,305026],
+    [6,194,'B6M',2,76.1,37.75,113.85,343774,309397],
+    [7,198,'B6M',2,76.1,37.75,113.85,348629,313766],
+    [7,199,'C5',3,89,41.7,130.7,369994,332995],
+    [8,202,'B6M',2,76.1,37.75,113.85,363196,326876],
+    [8,203,'C5',3,89,41.7,130.7,384500,346050]
+  ]
+};
+/* Amanecer 1 plans: built closed / terraces / total */
+const PLANS=[
+  ['A1',2,63.60,16.70,80.30],['A2',2,60.25,19.92,80.17],['A3',2,72.89,35.99,108.88],
+  ['B1',3,79.02,20.52,99.54],['B2',3,77.72,22.39,95.11],['B2A',3,72.72,23.88,96.60]
+];
+
+const T={
+ role:{en:'Real estate · Spain',es:'Inmobiliaria · España',ru:'Недвижимость · Испания',uk:'Нерухомість · Іспанія'},
+ heroKicker:{en:'Torre la Sal beach · Cabanes · Costa del Azahar',es:'Playa Torre la Sal · Cabanes · Costa del Azahar',ru:'Пляж Торре-ла-Саль · Кабанес · Коста-дель-Асаар',uk:'Пляж Торре-ла-Саль · Кабанес · Коста-дель-Асаар'},
+ heroSub:{en:'New beachfront apartments with 2 and 3 bedrooms — delivered fully furnished and equipped, with parking included.',es:'Apartamentos de obra nueva en primera línea de playa, de 2 y 3 dormitorios — se entregan amueblados y equipados, con plaza de garaje incluida.',ru:'Новые апартаменты на первой линии пляжа, 2 и 3 спальни — сдаются с мебелью и техникой, парковочное место включено.',uk:'Нові апартаменти на першій лінії пляжу, 2 та 3 спальні — передаються з меблями й технікою, паркомісце включено.'},
+ from:{en:'from',es:'desde',ru:'от',uk:'від'},
+ ctaWa:{en:'Ask on WhatsApp',es:'Consultar por WhatsApp',ru:'Написать в WhatsApp',uk:'Написати у WhatsApp'},
+ ctaUnits:{en:'See available apartments',es:'Ver apartamentos disponibles',ru:'Свободные квартиры',uk:'Вільні квартири'},
+ f1b:{en:'1st line',es:'1ª línea',ru:'1-я линия',uk:'1-ша лінія'},
+ f1:{en:'right on the beach',es:'frente al mar',ru:'у самого моря',uk:'біля самого моря'},
+ f2:{en:'bedrooms · 2 bathrooms · terrace',es:'dormitorios · 2 baños · terraza',ru:'спальни · 2 санузла · терраса',uk:'спальні · 2 санвузли · тераса'},
+ f3:{en:'furnished & equipped',es:'amueblado y equipado',ru:'мебель и техника',uk:'меблі й техніка'},
+ f4:{en:'parking space included in price',es:'plaza de garaje incluida en el precio',ru:'паркоместо включено в цену',uk:'паркомісце включено в ціну'},
+ aboutK:{en:'The project',es:'El proyecto',ru:'Проект',uk:'Проєкт'},
+ aboutH:{en:'Wake up facing the Mediterranean',es:'Despierta frente al Mediterráneo',ru:'Просыпайтесь с видом на Средиземное море',uk:'Прокидайтеся з видом на Середземне море'},
+ aboutP:{en:"Amanecer is a residential complex of three buildings on Torre la Sal beach — one of the best family beaches on the coast, surrounded by protected natural areas. Next door is Magic World / Marina d'Or with water parks, restaurants and Europe's largest sea-water spa.",es:"Amanecer es un residencial de tres edificios en la playa de Torre la Sal — una de las mejores playas familiares de la costa, rodeada de espacios naturales protegidos. Al lado, Magic World / Marina d'Or: parques acuáticos, restaurantes y el mayor balneario de agua marina de Europa.",ru:"Amanecer — жилой комплекс из трёх корпусов на пляже Торре-ла-Саль, одном из лучших семейных пляжей побережья в окружении природных заповедных зон. Рядом — Magic World / Marina d'Or: аквапарки, рестораны и крупнейший в Европе бальнеарий с морской водой.",uk:"Amanecer — житловий комплекс із трьох корпусів на пляжі Торре-ла-Саль, одному з найкращих сімейних пляжів узбережжя серед заповідних природних зон. Поруч — Magic World / Marina d'Or: аквапарки, ресторани та найбільший у Європі бальнеарій з морською водою."},
+ a1:{en:"Pool with separate adults' and children's areas, LED lighting and 3 hydromassage spas",es:'Piscina con zonas para adultos y niños, iluminación LED y 3 spas de hidromasaje',ru:'Бассейн с зонами для взрослых и детей, LED-подсветкой и 3 джакузи',uk:'Басейн із зонами для дорослих і дітей, LED-підсвіткою та 3 джакузі'},
+ a2:{en:'Social lounge for residents and landscaped pedestrian area',es:'Salón social para residentes y zona peatonal ajardinada',ru:'Лаунж-зал для жильцов и озеленённая пешеходная зона',uk:'Лаунж-зала для мешканців та озеленена пішохідна зона'},
+ a3:{en:'Lobby with 3 lifts, underground and ground-floor parking, EV charging pre-installation',es:'Vestíbulo con 3 ascensores, garaje en sótano y planta baja, preinstalación de carga para vehículo eléctrico',ru:'Лобби с 3 лифтами, подземный и наземный паркинг, подготовка под зарядку электромобилей',uk:'Лобі з 3 ліфтами, підземний і наземний паркінг, підготовка під зарядку електромобілів'},
+ a4:{en:'Air conditioning (hot/cold), aerothermal hot water, motorised blinds, double glazing',es:'Aire acondicionado frío/calor, aerotermia para ACS, persianas motorizadas, doble acristalamiento',ru:'Кондиционер (тепло/холод), аэротермия для горячей воды, электрожалюзи, двойные стеклопакеты',uk:'Кондиціонер (тепло/холод), аеротермія для гарячої води, електрожалюзі, подвійні склопакети'},
+ a5:{en:'Apartments are handed over with furniture, appliances, TVs and kitchenware — ready to move in or rent out',es:'Se entregan con muebles, electrodomésticos, televisores y menaje — listos para vivir o alquilar',ru:'Квартиры сдаются с мебелью, техникой, телевизорами и посудой — можно сразу жить или сдавать в аренду',uk:'Квартири передаються з меблями, технікою, телевізорами та посудом — можна одразу жити або здавати в оренду'},
+ galK:{en:'Gallery',es:'Galería',ru:'Галерея',uk:'Галерея'},
+ galH:{en:'Life at Amanecer',es:'La vida en Amanecer',ru:'Жизнь в Amanecer',uk:'Життя в Amanecer'},
+ avK:{en:'Availability & prices',es:'Disponibilidad y precios',ru:'Наличие и цены',uk:'Наявність і ціни'},
+ avH:{en:'Available apartments',es:'Apartamentos disponibles',ru:'Свободные квартиры',uk:'Вільні квартири'},
+ avP:{en:'Current offer with the 10% promotion. Prices include a parking space.',es:'Oferta actual con la promoción del 10%. Precios con plaza de garaje incluida.',ru:'Актуальное предложение с акцией −10%. Цены указаны с паркоместом.',uk:'Актуальна пропозиція з акцією −10%. Ціни вказано з паркомісцем.'},
+ avNote:{en:'Prices and availability as of 12.11.2026 and may change — please confirm with me before booking. m² — built area.',es:'Precios y disponibilidad a 12.11.2026, sujetos a cambios — confírmelos conmigo antes de reservar. m² — superficie construida.',ru:'Цены и наличие на 12.11.2026 и могут меняться — уточняйте у меня перед бронированием. м² — строительная площадь.',uk:'Ціни та наявність станом на 12.11.2026 і можуть змінюватися — уточнюйте в мене перед бронюванням. м² — будівельна площа.'},
+ all:{en:'All',es:'Todos',ru:'Все',uk:'Усі'},
+ bed2:{en:'2 bedrooms',es:'2 dormitorios',ru:'2 спальни',uk:'2 спальні'},
+ bed3:{en:'3 bedrooms',es:'3 dormitorios',ru:'3 спальни',uk:'3 спальні'},
+ apt:{en:'Apt.',es:'Apto.',ru:'Кв.',uk:'Кв.'},
+ floor:{en:'floor',es:'planta',ru:'этаж',uk:'поверх'},
+ type:{en:'type',es:'tipo',ru:'тип',uk:'тип'},
+ beds:{en:'bedrooms',es:'dorm.',ru:'спальни',uk:'спальні'},
+ interior:{en:'interior',es:'interior',ru:'жилая',uk:'житлова'},
+ terrace:{en:'terrace',es:'terraza',ru:'терраса',uk:'тераса'},
+ total:{en:'total',es:'total',ru:'всего',uk:'всього'},
+ avail:{en:'Available',es:'Disponible',ru:'Свободна',uk:'Вільна'},
+ inclP:{en:'incl. parking',es:'garaje incl.',ru:'с паркингом',uk:'з паркінгом'},
+ ask:{en:'Request',es:'Consultar',ru:'Запросить',uk:'Запитати'},
+ plan:{en:'Plan',es:'Plano',ru:'Планировка',uk:'Планування'},
+ planReq:{en:'Plan on request',es:'Plano a consultar',ru:'План по запросу',uk:'План за запитом'},
+ units:{en:'units',es:'uds.',ru:'кв.',uk:'кв.'},
+ plK:{en:'Floor plans',es:'Planos',ru:'Планировки',uk:'Планування'},
+ plH:{en:'Apartment layouts · Amanecer 1',es:'Tipologías · Amanecer 1',ru:'Планировки · Amanecer 1',uk:'Планування · Amanecer 1'},
+ plP:{en:'Tap a plan to enlarge. Layouts for Amanecer 2 and 3 — on request.',es:'Pulse para ampliar. Planos de Amanecer 2 y 3 — a consultar.',ru:'Нажмите, чтобы увеличить. Планировки Amanecer 2 и 3 — по запросу.',uk:'Натисніть, щоб збільшити. Планування Amanecer 2 і 3 — за запитом.'},
+ closed:{en:'closed',es:'cerrada',ru:'закрытая',uk:'закрита'},
+ incK:{en:'Included in the price',es:'Incluido en el precio',ru:'Включено в цену',uk:'Включено в ціну'},
+ incH:{en:'Ready to move in',es:'Listo para entrar a vivir',ru:'Можно сразу заезжать',uk:'Можна одразу заїжджати'},
+ i1h:{en:'Furniture',es:'Mobiliario',ru:'Мебель',uk:'Меблі'},
+ i1a:{en:'Sofa bed, coffee table, dining table with 6 chairs',es:'Sofá cama, mesa de centro, mesa de comedor con 6 sillas',ru:'Диван-кровать, журнальный столик, обеденный стол с 6 стульями',uk:'Диван-ліжко, журнальний столик, обідній стіл із 6 стільцями'},
+ i1b:{en:'Double bed 150 cm with storage base and bedside tables',es:'Cama de matrimonio 150 cm con canapé y mesitas de noche',ru:'Двуспальная кровать 150 см с подъёмным основанием и тумбочками',uk:'Двоспальне ліжко 150 см з підйомною основою та тумбочками'},
+ i1c:{en:'Single beds 90 cm in the other bedrooms',es:'Camas individuales de 90 cm en los demás dormitorios',ru:'Односпальные кровати 90 см в других спальнях',uk:'Односпальні ліжка 90 см в інших спальнях'},
+ i1d:{en:'Terrace: table with 4 chairs, 2-seater sofa and coffee table',es:'Terraza: mesa con 4 sillas, sofá de 2 plazas y mesa de centro',ru:'Терраса: стол с 4 стульями, 2-местный диван и столик',uk:'Тераса: стіл із 4 стільцями, 2-місний диван і столик'},
+ i1e:{en:'Built-in wardrobes with safe in the master bedroom',es:'Armarios empotrados, caja fuerte en el dormitorio principal',ru:'Встроенные шкафы, сейф в главной спальне',uk:'Вбудовані шафи, сейф у головній спальні'},
+ i2h:{en:'Kitchen & appliances',es:'Cocina y electrodomésticos',ru:'Кухня и техника',uk:'Кухня й техніка'},
+ i2a:{en:'Induction hob, oven, microwave, extractor hood',es:'Placa de inducción, horno, microondas, campana',ru:'Индукционная плита, духовка, микроволновка, вытяжка',uk:'Індукційна плита, духовка, мікрохвильовка, витяжка'},
+ i2b:{en:'Combi fridge-freezer, dishwasher, washer-dryer',es:'Frigorífico combi, lavavajillas, lavadora-secadora',ru:'Холодильник с морозилкой, посудомойка, стирально-сушильная машина',uk:'Холодильник із морозилкою, посудомийка, прально-сушильна машина'},
+ i2c:{en:'Quartz-type worktop',es:'Encimera de cuarzo o similar',ru:'Столешница из кварца или аналога',uk:'Стільниця з кварцу або аналога'},
+ i2d:{en:'Coffee machine, juicer, blender, cookware set',es:'Cafetera, exprimidor, batidora, batería de cocina',ru:'Кофемашина, соковыжималка, блендер, набор посуды',uk:'Кавоварка, соковитискач, блендер, набір посуду'},
+ i3h:{en:'Comfort',es:'Confort',ru:'Комфорт',uk:'Комфорт'},
+ i3a:{en:'42" Smart TV in the living room, 32" TV in the master bedroom',es:'Smart TV de 42" en el salón, TV de 32" en el dormitorio principal',ru:'Smart TV 42" в гостиной, ТВ 32" в главной спальне',uk:'Smart TV 42" у вітальні, ТВ 32" у головній спальні'},
+ i3b:{en:'Air conditioning hot/cold',es:'Aire acondicionado frío/calor',ru:'Кондиционер тепло/холод',uk:'Кондиціонер тепло/холод'},
+ i3c:{en:'Motorised aluminium blinds, double glazing',es:'Persianas de aluminio motorizadas, doble acristalamiento',ru:'Алюминиевые электрожалюзи, двойные стеклопакеты',uk:'Алюмінієві електрожалюзі, подвійні склопакети'},
+ i3d:{en:'Lighting, mirrors, bathroom furniture and decor',es:'Iluminación, espejos, muebles de baño y decoración',ru:'Освещение, зеркала, мебель для ванной и декор',uk:'Освітлення, дзеркала, меблі для ванної та декор'},
+ i3e:{en:'Video intercom, aerothermal hot water',es:'Videoportero, agua caliente por aerotermia',ru:'Видеодомофон, горячая вода от аэротермии',uk:'Відеодомофон, гаряча вода від аеротермії'},
+ locK:{en:'Location',es:'Ubicación',ru:'Расположение',uk:'Розташування'},
+ locH:{en:'Between Valencia and Barcelona',es:'Entre Valencia y Barcelona',ru:'Между Валенсией и Барселоной',uk:'Між Валенсією та Барселоною'},
+ locP:{en:"Torre la Sal beach (Ribera de Cabanes), next to Oropesa del Mar and Magic World / Marina d'Or — over 300 sunny days a year.",es:"Playa de Torre la Sal (Ribera de Cabanes), junto a Oropesa del Mar y Magic World / Marina d'Or — más de 300 días de sol al año.",ru:"Пляж Торре-ла-Саль (Рибера-де-Кабанес), рядом с Оропеса-дель-Мар и Magic World / Marina d'Or — более 300 солнечных дней в году.",uk:"Пляж Торре-ла-Саль (Рібера-де-Кабанес), поруч з Оропеса-дель-Мар і Magic World / Marina d'Or — понад 300 сонячних днів на рік."},
+ d1:{en:'Beach',es:'Playa',ru:'Пляж',uk:'Пляж'},
+ d1v:{en:'first line',es:'primera línea',ru:'первая линия',uk:'перша лінія'},
+ d2:{en:'Oropesa train station (AVE)',es:'Estación de Oropesa (AVE)',ru:'Ж/д станция Оропеса (AVE)',uk:'Залізнична станція Оропеса (AVE)'},
+ d3:{en:'Castellón airport',es:'Aeropuerto de Castellón',ru:'Аэропорт Кастельон',uk:'Аеропорт Кастельйон'},
+ d4:{en:'Valencia airport',es:'Aeropuerto de Valencia',ru:'Аэропорт Валенсии',uk:'Аеропорт Валенсії'},
+ d5:{en:"Magic World / Marina d'Or, sea-water spa",es:"Magic World / Marina d'Or, balneario",ru:"Magic World / Marina d'Or, бальнеарий",uk:"Magic World / Marina d'Or, бальнеарій"},
+ d5v:{en:'next door',es:'al lado',ru:'рядом',uk:'поруч'},
+ agentRole:{en:'Your real estate agent · Valencia',es:'Su agente inmobiliaria · Valencia',ru:'Ваш агент по недвижимости · Валенсия',uk:'Ваш агент з нерухомості · Валенсія'},
+ cH:{en:'Book a viewing or ask a question',es:'Reserve una visita o haga su consulta',ru:'Запишитесь на просмотр или задайте вопрос',uk:'Запишіться на перегляд або поставте запитання'},
+ cP:{en:"I'll send current availability, payment terms and arrange a visit to the show flat. I speak English, Spanish, Russian and Ukrainian.",es:'Le envío la disponibilidad actual, las condiciones de pago y organizo la visita al piso piloto. Hablo español, inglés, ruso y ucraniano.',ru:'Пришлю актуальное наличие, условия оплаты и организую просмотр шоу-рума. Говорю на русском, украинском, английском и испанском.',uk:'Надішлю актуальну наявність, умови оплати й організую перегляд шоу-руму. Розмовляю українською, російською, англійською та іспанською.'},
+ disc:{en:"Plans, renders and photos are for information only and are not contractually binding; furniture and decoration may be replaced by items of similar quality. Taxes and purchase costs are not included in the price. Developer: Inseryal S.L. (Marina d'Or group).",es:"Planos, infografías y fotografías con carácter informativo, sin valor contractual; el mobiliario y la decoración pueden sustituirse por otros de calidad similar. Impuestos y gastos de compraventa no incluidos. Promotora: Inseryal S.L. (grupo Marina d'Or).",ru:"Планы, визуализации и фото носят информационный характер и не являются частью договора; мебель и декор могут быть заменены аналогами. Налоги и расходы на покупку в цену не входят. Застройщик: Inseryal S.L. (группа Marina d'Or).",uk:"Плани, візуалізації та фото мають інформаційний характер і не є частиною договору; меблі й декор можуть бути замінені аналогами. Податки та витрати на купівлю до ціни не входять. Забудовник: Inseryal S.L. (група Marina d'Or)."},
+ waMsg:{en:"Hello Alla! I'm interested in Amanecer (Torre la Sal).",es:'¡Hola Alla! Me interesa Amanecer (Torre la Sal).',ru:'Здравствуйте, Алла! Интересует Amanecer (Торре-ла-Саль).',uk:'Добрий день, Алло! Цікавить Amanecer (Торре-ла-Саль).'},
+ waUnit:{en:'Hello Alla! I\'m interested in {b}, apartment {d} ({t}), {p}.',es:'¡Hola Alla! Me interesa {b}, apartamento {d} ({t}), {p}.',ru:'Здравствуйте, Алла! Интересует {b}, квартира {d} ({t}), {p}.',uk:'Добрий день, Алло! Цікавить {b}, квартира {d} ({t}), {p}.'}
+};
+
+let L='en', B='Amanecer 1', F=0;
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const t=k=>(T[k]&&T[k][L])||k;
+const locale={en:'en-GB',es:'es-ES',ru:'ru-RU',uk:'uk-UA'};
+const eur=n=>new Intl.NumberFormat(locale[L],{maximumFractionDigits:0}).format(n)+' €';
+const num=n=>new Intl.NumberFormat(locale[L],{maximumFractionDigits:2}).format(n);
+const wa=msg=>'https://wa.me/'+PHONE+'?text='+encodeURIComponent(msg);
+
+function render(){
+  document.documentElement.lang=L==='uk'?'uk':L;
+  $$('[data-t]').forEach(el=>el.textContent=t(el.dataset.t));
+  $$('#langs button').forEach(b=>b.classList.toggle('on',b.dataset.l===L));
+  $$('.wa-link').forEach(a=>a.href=wa(t('waMsg')));
+  const all=Object.values(DATA).flat(); $('#minPrice').textContent=eur(Math.min(...all.map(r=>r[8])));
+  // tabs
+  $('#tabs').innerHTML=Object.keys(DATA).map(k=>`<button class="tab ${k===B?'on':''}" data-b="${k}">${k}<em>· ${DATA[k].length} ${t('units')}</em></button>`).join('');
+  $$('#tabs .tab').forEach(b=>b.onclick=()=>{B=b.dataset.b;render()});
+  $('#filters').innerHTML=[[0,t('all')],[2,t('bed2')],[3,t('bed3')]].map(([v,l])=>`<button class="chip ${F===v?'on':''}" data-f="${v}">${l}</button>`).join('');
+  $$('#filters .chip').forEach(b=>b.onclick=()=>{F=+b.dataset.f;render()});
+  const planTypes=PLANS.map(p=>p[0]);
+  const rows=DATA[B].filter(r=>!F||r[3]===F).sort((a,b)=>a[8]-b[8]);
+  $('#units').innerHTML=rows.map(r=>{
+    const [fl,door,type,bd,int,ter,tot,list,price]=r;
+    const hasPlan=B==='Amanecer 1'&&planTypes.includes(type);
+    const msg=t('waUnit').replace('{b}',B).replace('{d}',door).replace('{t}',type).replace('{p}',eur(price));
+    return `<div class="unit">
+      <div class="head"><div class="no">${t('apt')} ${door}<small>${fl?fl+' '+t('floor')+' · ':''}${t('type')} ${type}</small></div><span class="badge">${t('avail')}</span></div>
+      <div class="specs"><div><b>${bd}</b>${t('beds')}</div><div><b>${num(int)}</b>m² ${t('interior')}</div><div><b>${num(ter)}</b>m² ${t('terrace')}</div></div>
+      <div class="price"><b>${eur(price)}</b><s>${eur(list)}</s><span class="off">−10%</span></div>
+      <div style="font-size:12px;color:var(--muted);margin-top:-6px">${num(tot)} m² ${t('total')} · ${t('inclP')}</div>
+      <div class="acts"><a class="ask" href="${wa(msg)}" target="_blank" rel="noopener">${t('ask')}</a>${hasPlan?`<button class="plan" data-plan="${type}">${t('plan')}</button>`:`<button class="plan" disabled>${t('planReq')}</button>`}</div>
+    </div>`}).join('');
+  $$('#units .plan[data-plan]').forEach(b=>b.onclick=()=>openLB(['img/plan-'+b.dataset.plan+'.jpg'],0));
+  $('#planGrid').innerHTML=PLANS.map(([ty,bd,cl,te,to])=>`<div class="plancard" data-src="img/plan-${ty}.jpg"><img src="img/plan-${ty}.jpg" alt="Plan ${ty}" loading="lazy"><div><h3>${ty}</h3><p>${bd} ${t('beds')} · ${num(cl)} m² ${t('closed')} + ${num(te)} m² ${t('terrace')} = <b>${num(to)} m²</b></p></div></div>`).join('');
+  $$('.plancard').forEach((c,i,arr)=>c.onclick=()=>openLB(arr.map(x=>x.dataset.src),i));
+}
+
+// lightbox
+let LBs=[],LBi=0;
+function openLB(list,i){LBs=list;LBi=i;showLB();$('#lb').classList.add('on')}
+function showLB(){$('#lb img').src=LBs[LBi];$$('#lb .nav').forEach(n=>n.style.display=LBs.length>1?'':'none')}
+$('#lb .x').onclick=()=>$('#lb').classList.remove('on');
+$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').classList.remove('on')};
+$('#lb .prev').onclick=()=>{LBi=(LBi-1+LBs.length)%LBs.length;showLB()};
+$('#lb .next').onclick=()=>{LBi=(LBi+1)%LBs.length;showLB()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#lb').classList.remove('on')});
+$$('#gal figure').forEach((f,i,arr)=>f.onclick=()=>openLB(arr.map(x=>x.querySelector('img').src),i));
+
+// language
+$$('#langs button').forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem('lang',L)}catch(e){};const u=new URL(location);u.searchParams.set('lang',L);history.replaceState(null,'',u);render()});
+(function(){
+  const q=new URLSearchParams(location.search).get('lang');
+  let s=null;try{s=localStorage.getItem('lang')}catch(e){}
+  const n=(navigator.language||'en').slice(0,2);
+  const pick=q||s||({es:'es',ru:'ru',uk:'uk',ua:'uk'}[n])||'en';
+  L=({ua:'uk'}[pick])||(T.from[pick]?pick:'en');
+})();
+render();
+</script>
+</body>
+</html>
