@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Still House · Villa de diseño · 5.800.000 € — Alla Rogachova</title>
+<meta name="description" content="The Still House: villa contemporánea de 548,57 m² en parcela de 1.378,80 m². Salón a doble altura, 4 dormitorios, piscina, cine, sauna y gimnasio.">
+<meta property="og:title" content="The Still House · Villa de diseño">
+<meta property="og:description" content="548,57 m² construidos · parcela de 1.378,80 m² · piscina, cine, sauna y gimnasio · 5.800.000 €">
+<meta property="og:image" content="https://alla-rogachova.github.io/still-house/img/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2a221c; --muted:#6e635a; --ivory:#f6f1ea; --stone:#ebe3d7; --line:#ddd2c3;
+  --walnut:#5a3d2b; --oak:#9a6b45; --white:#fffdf9; --wa:#1fa855; --tg:#2a9fd8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:.2px}
+h2{font-size:clamp(32px,5vw,50px);margin-bottom:14px}
+h3{font-size:clamp(24px,3.2vw,32px);margin-bottom:8px}
+.kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--oak);font-weight:600;margin-bottom:12px}
+.lead{color:var(--muted);max-width:680px;font-size:17px}
+section{padding:84px 0}
+.alt{background:var(--ivory)}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:600;text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:-2px}
+.menu{display:flex;gap:22px;font-size:13px;font-weight:500}
+.menu a{text-decoration:none;color:var(--muted)}
+.menu a:hover{color:var(--ink)}
+@media(max-width:860px){.menu{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,10,.15) 0%,rgba(20,14,10,.05) 40%,rgba(20,14,10,.72) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:64px;width:100%}
+.hero .kicker{color:#f0dcc4}
+.hero h1{font-size:clamp(54px,10vw,112px);margin-bottom:10px}
+.hero p{max-width:620px;font-size:18px;opacity:.94}
+.price{display:inline-flex;align-items:baseline;gap:10px;margin:26px 0 24px;padding:12px 22px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:rgba(20,14,10,.25);backdrop-filter:blur(6px)}
+.price small{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.85}
+.price b{font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border-radius:999px;border:1.5px solid transparent;cursor:pointer}
+.btn svg{width:18px;height:18px}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-tg{background:var(--tg);color:#fff}
+.btn-light{border-color:rgba(255,255,255,.8);color:#fff}
+.btn-out{border-color:var(--ink);color:var(--ink)}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.fact{padding:26px 18px;text-align:center;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:600;line-height:1.1}
+.fact span{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+@media(max-width:900px){.facts{grid-template-columns:repeat(3,1fr)}.fact:nth-child(3){border-right:0}.fact:nth-child(-n+3){border-bottom:1px solid var(--line)}}
+@media(max-width:520px){.facts{grid-template-columns:repeat(2,1fr)}.fact{border-right:1px solid var(--line)!important;border-bottom:1px solid var(--line)}.fact:nth-child(2n){border-right:0!important}}
+
+/* concept */
+.concept{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.concept p+p{margin-top:14px}
+.concept .txt p{color:var(--muted)}
+.concept img{border-radius:4px;aspect-ratio:3/4;object-fit:cover;width:100%;cursor:zoom-in}
+.quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(26px,3.6vw,36px);line-height:1.25;color:var(--walnut);margin-bottom:22px}
+@media(max-width:860px){.concept{grid-template-columns:1fr;gap:30px}}
+
+/* materials */
+.mats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px}
+.mat{background:var(--white);border:1px solid var(--line);padding:22px 18px;border-radius:4px}
+.mat i{display:block;width:44px;height:44px;border-radius:50%;margin-bottom:14px;border:1px solid rgba(0,0,0,.06)}
+.mat b{display:block;font-weight:600;margin-bottom:4px}
+.mat span{font-size:14px;color:var(--muted)}
+@media(max-width:900px){.mats{grid-template-columns:repeat(2,1fr)}}
+
+/* levels */
+.level{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:start}
+.level .side{position:sticky;top:90px}
+.level .side p{color:var(--muted);margin-bottom:16px}
+.rooms{list-style:none;border-top:1px solid var(--line);margin-bottom:18px}
+.rooms li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.rooms li span:last-child{color:var(--muted);white-space:nowrap}
+.planbtn{display:block;border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:zoom-in;background:#fff}
+.planbtn img{width:100%;aspect-ratio:1.45;object-fit:contain}
+.planbtn div{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-top:1px solid var(--line)}
+@media(max-width:900px){.level{grid-template-columns:1fr;gap:26px}.level .side{position:static}}
+
+/* gallery grids */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px}
+.gal figure{position:relative;overflow:hidden;border-radius:3px;cursor:zoom-in;background:var(--stone)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;font-size:12px;letter-spacing:.5px;color:#fff;background:linear-gradient(transparent,rgba(20,14,10,.6));opacity:0;transition:opacity .3s}
+.gal figure:hover figcaption{opacity:1}
+.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}.c6{grid-column:span 6}
+.r2{grid-row:span 2}.r3{grid-row:span 3}
+@media(max-width:700px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}.c2,.c3{grid-column:span 1}.c4,.c6{grid-column:span 2}.r3{grid-row:span 2}}
+.sub{margin:40px 0 14px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--oak);font-weight:600}
+
+/* exterior band */
+.band{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:34px}
+.band img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;cursor:zoom-in}
+@media(max-width:700px){.band{grid-template-columns:1fr}}
+
+/* surfaces table */
+.tbls{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--white)}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--stone)}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+tr.tot td{font-weight:600;border-bottom:2px solid var(--ink)}
+@media(max-width:860px){.tbls{grid-template-columns:1fr}}
+
+/* drawings */
+.draw{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.draw figure{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:zoom-in}
+.draw img{width:100%;aspect-ratio:1.45;object-fit:contain}
+.draw figcaption{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-top:1px solid var(--line)}
+@media(max-width:860px){.draw{grid-template-columns:1fr 1fr}}
+
+/* contact */
+.contact{background:var(--walnut);color:#fff;text-align:center}
+.contact .kicker{color:#e8c9a6}
+.contact .lead{color:rgba(255,255,255,.82);margin:0 auto 28px}
+.contact .btns{justify-content:center}
+.contact .btn-out{border-color:rgba(255,255,255,.7);color:#fff}
+.agent{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;text-align:left}
+.av{width:50px;height:50px;border-radius:50%;background:#fff;color:var(--walnut);display:flex;align-items:center;justify-content:center;font-weight:600}
+.agent b{display:block}.agent span{font-size:13px;opacity:.8}
+.cprice{font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:600;margin:4px 0 6px}
+footer{background:#21180f;color:rgba(255,255,255,.55);font-size:12px;padding:22px 0;text-align:center}
+
+/* floating wa */
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.fab svg{width:28px;height:28px;fill:#fff}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(18,12,8,.95);z-index:100;display:none;align-items:center;justify-content:center;padding:20px;flex-direction:column}
+.lb.on{display:flex}
+.lb img{max-height:84vh;max-width:94vw;border-radius:3px;background:#fff}
+.lb p{color:rgba(255,255,255,.8);font-size:13px;margin-top:12px;letter-spacing:.5px}
+.lb button{position:absolute;top:14px;right:16px;background:#ffffff22;color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:24px;cursor:pointer}
+.lb .nav{top:50%;transform:translateY(-50%)}
+.lb .prev{left:12px;right:auto}.lb .next{right:12px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../">Alla Rogachova<small>Real estate · Spain</small></a>
+    <nav class="menu">
+      <a href="#concepto">Concepto</a>
+      <a href="#exterior">Exterior</a>
+      <a href="#baja">Planta baja</a>
+      <a href="#primera">Planta primera</a>
+      <a href="#sotano">Sótano</a>
+      <a href="#superficies">Superficies</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <img src="img/hero.jpg" alt="The Still House — terraza con piscina, zona de fuego y cocina exterior">
+  <div class="wrap">
+    <div class="kicker">Villa contemporánea · Obra nueva</div>
+    <h1>The Still House</h1>
+    <p>Una arquitectura concebida para la quietud y la permanencia: tonos naturales, luz y texturas que unen el interior con el paisaje que la rodea.</p>
+    <div class="price"><small>Precio</small><b>5.800.000 €</b></div>
+    <div class="btns">
+      <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>Consultar por WhatsApp</a>
+      <a class="btn btn-light" href="#concepto">Descubrir la casa</a>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="fact"><b>548,57 m²</b><span>Construidos</span></div>
+  <div class="fact"><b>1.378,80 m²</b><span>Parcela</span></div>
+  <div class="fact"><b>4</b><span>Dormitorios</span></div>
+  <div class="fact"><b>4 + 1</b><span>Baños + aseo</span></div>
+  <div class="fact"><b>3</b><span>Plantas + ascensor</span></div>
+  <div class="fact"><b>40,50 m²</b><span>Piscina</span></div>
+</div>
+
+<section id="concepto">
+  <div class="wrap concept">
+    <div class="txt">
+      <div class="kicker">Enfoque del proyecto</div>
+      <h2>Una casa pensada para durar décadas</h2>
+      <p class="quote">No guiada por tendencias, sino por la tecnología, la calidad y la honestidad de los materiales.</p>
+      <p>The Still House se despliega como un refugio contemporáneo sobre una parcela de 1.378,80 m². Su superficie de 548,57 m² está diseñada para que cada espacio tenga su propia atmósfera y ritmo, manteniéndose siempre dentro de un conjunto coherente.</p>
+      <p>Cada decisión espacial nace de un estudio detallado de proporciones, luz y escenarios de vida diaria. El equilibrio entre amplitud y precisión permite que la arquitectura respire, conservando calidez e intimidad.</p>
+      <p>El interior integra piezas y sistemas de marcas con décadas de trayectoria, referentes en ingeniería, iluminación, sanitarios y mobiliario. Así nace una casa que envejece con elegancia.</p>
+    </div>
+    <img src="img/s/living.jpg" data-full="img/living.jpg" data-cap="Salón a doble altura" alt="Salón a doble altura" class="zoom">
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Materiales</div>
+    <h2>Un diálogo de tonos naturales</h2>
+    <p class="lead">Beiges suaves, maderas cálidas, piedras expresivas y acentos metálicos refinados crean una sensación de calma y permanencia, sin elementos superfluos.</p>
+    <div class="mats">
+      <div class="mat"><i style="background:#9a6b45"></i><b>Madera natural</b><span>Roble en revestimientos, techos y mobiliario a medida</span></div>
+      <div class="mat"><i style="background:#d9ccb8"></i><b>Piedra</b><span>Travertino en fachada, terraza, baños y spa</span></div>
+      <div class="mat"><i style="background:#eee6da"></i><b>Microcemento</b><span>Suelos continuos y escalera de líneas puras</span></div>
+      <div class="mat"><i style="background:linear-gradient(135deg,#dfe7ea,#f7fafb)"></i><b>Vidrio</b><span>Grandes ventanales que abren la casa al jardín</span></div>
+      <div class="mat"><i style="background:linear-gradient(135deg,#a88656,#d8bf91)"></i><b>Metales nobles</b><span>Grifería y herrajes en latón cepillado</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="exterior">
+  <div class="wrap">
+    <div class="kicker">Exterior</div>
+    <h2>Terraza, piscina y jardín</h2>
+    <p class="lead">Desde la planta principal se accede a la terraza con comedor exterior, zona de estar, barbacoa, piscina y un área de fuego hundida, rodeada de un jardín trasero de más de 500 m².</p>
+    <div class="band">
+      <img class="zoom" src="img/s/hero.jpg" data-full="img/hero.jpg" data-cap="Terraza con zona de fuego, comedor exterior y piscina" alt="Terraza y zona de fuego">
+      <img class="zoom" src="img/s/bbq.jpg" data-full="img/bbq.jpg" data-cap="Cocina exterior y barbacoa en travertino y madera" alt="Cocina exterior">
+    </div>
+  </div>
+</section>
+
+<section id="baja" class="alt">
+  <div class="wrap level">
+    <div class="side">
+      <div class="kicker">Planta baja</div>
+      <h2>Vida social</h2>
+      <p>Salón a doble altura, comedor y una cocina amplia abiertos a la terraza. En este nivel también se encuentran dos dormitorios de invitados.</p>
+      <ul class="rooms">
+        <li><span>Salón (doble altura 5,47 m)</span><span>26,56 m²</span></li>
+        <li><span>Cocina</span><span>22,12 m²</span></li>
+        <li><span>Comedor</span><span>17,01 m²</span></li>
+        <li><span>Dormitorios 03 y 04</span><span>12,69 · 12,66 m²</span></li>
+        <li><span>Baño 03 · Aseo</span><span>4,97 · 2,19 m²</span></li>
+        <li><span>Porche comedor</span><span>17,15 m²</span></li>
+        <li><span>Solárium</span><span>128,32 m²</span></li>
+      </ul>
+      <figure class="planbtn zoom" data-full="img/plan-baja.jpg" data-cap="Plano · Planta baja"><img src="img/s/plan-baja.jpg" alt="Plano planta baja"><div>Ver plano · Planta baja</div></figure>
+    </div>
+    <div>
+      <div class="gal" data-g="baja"></div>
+    </div>
+  </div>
+</section>
+
+<section id="primera">
+  <div class="wrap level">
+    <div class="side">
+      <div class="kicker">Planta primera</div>
+      <h2>Zona privada</h2>
+      <p>El dormitorio principal con un vestidor generoso y un baño singular en piedra natural. El segundo ala está destinada a la zona infantil.</p>
+      <ul class="rooms">
+        <li><span>Dormitorio principal</span><span>22,48 m²</span></li>
+        <li><span>Dormitorio 02</span><span>15,69 m²</span></li>
+        <li><span>Vestidor y baño principal</span><span>en suite</span></li>
+        <li><span>Terrazas privadas</span><span>2</span></li>
+        <li><span>Superficie construida</span><span>108,13 m²</span></li>
+      </ul>
+      <figure class="planbtn zoom" data-full="img/plan-primera.jpg" data-cap="Plano · Planta primera"><img src="img/s/plan-primera.jpg" alt="Plano planta primera"><div>Ver plano · Planta primera</div></figure>
+    </div>
+    <div>
+      <div class="sub" style="margin-top:0">Suite principal</div>
+      <div class="gal" data-g="master"></div>
+      <div class="sub">Dormitorios</div>
+      <div class="gal" data-g="beds"></div>
+    </div>
+  </div>
+</section>
+
+<section id="sotano" class="alt">
+  <div class="wrap level">
+    <div class="side">
+      <div class="kicker">Sótano</div>
+      <h2>Bienestar y ocio</h2>
+      <p>Sala de cine, sauna, gimnasio y un área de descanso privada abierta a un patio inglés con jardín. Además, garaje, lavandería y un vestidor boutique.</p>
+      <ul class="rooms">
+        <li><span>Garaje (2 plazas)</span><span>51,88 m²</span></li>
+        <li><span>Gimnasio</span><span>25,12 m²</span></li>
+        <li><span>Cine</span><span>19,44 m²</span></li>
+        <li><span>Vestidor boutique</span><span>17,05 m²</span></li>
+        <li><span>Lavadero</span><span>13,24 m²</span></li>
+        <li><span>Sauna · Baño 04</span><span>4,24 · 4,96 m²</span></li>
+        <li><span>Patio inglés</span><span>30,20 m²</span></li>
+      </ul>
+      <figure class="planbtn zoom" data-full="img/plan-sotano.jpg" data-cap="Plano · Planta sótano"><img src="img/s/plan-sotano.jpg" alt="Plano sótano"><div>Ver plano · Sótano</div></figure>
+    </div>
+    <div>
+      <div class="gal" data-g="sotano"></div>
+    </div>
+  </div>
+</section>
+
+<section id="superficies">
+  <div class="wrap">
+    <div class="kicker">Datos técnicos</div>
+    <h2>Superficies</h2>
+    <p class="lead">Según el proyecto de arquitectura. Parcela de 1.378,80 m² con jardín frontal de 206,50 m² y jardín trasero de 503,61 m².</p>
+    <div class="tbls">
+      <table>
+        <tr><th>Planta</th><th>Construida</th></tr>
+        <tr><td>Sótano</td><td>264,86 m²</td></tr>
+        <tr><td>Planta baja</td><td>175,58 m²</td></tr>
+        <tr><td>Planta primera</td><td>108,13 m²</td></tr>
+        <tr class="tot"><td>Total construida</td><td>548,57 m²</td></tr>
+      </table>
+      <table>
+        <tr><th>Exterior</th><th>Superficie</th></tr>
+        <tr><td>Jardín trasero</td><td>503,61 m²</td></tr>
+        <tr><td>Jardín frontal</td><td>206,50 m²</td></tr>
+        <tr><td>Solárium</td><td>128,32 m²</td></tr>
+        <tr><td>Piscina</td><td>40,50 m²</td></tr>
+        <tr><td>Terrazas (acceso y salón)</td><td>26,28 m²</td></tr>
+      </table>
+    </div>
+    <div class="sub">Planos y vistas 3D</div>
+    <div class="draw" id="draw"></div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="agent"><div class="av">AR</div><div><b>Alla Rogachova</b><span>Agente inmobiliaria · España</span></div></div>
+    <div class="kicker">The Still House</div>
+    <div class="cprice">5.800.000 €</div>
+    <p class="lead">Le envío el dosier completo, los planos en alta resolución y organizamos una visita. Hablo español, inglés, ruso y ucraniano.</p>
+    <div class="btns">
+      <a class="btn btn-wa wa-link" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-tg" href="https://t.me/+380663055318" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn btn-out" href="tel:+34645659523">+34 645 659 523</a>
+      <a class="btn btn-out" href="mailto:rogachova.alla@gmail.com">rogachova.alla@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Imágenes de carácter orientativo (renders del proyecto). La información no tiene carácter contractual.</div></footer>
+
+<a class="fab wa-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
+
+<div class="lb" id="lb"><button class="x" aria-label="Cerrar">✕</button><button class="nav prev" aria-label="Anterior">‹</button><img alt=""><p></p><button class="nav next" aria-label="Siguiente">›</button></div>
+
+<script>
+const PHONE='34645659523';
+const MSG='¡Hola Alla! Me interesa The Still House (5.800.000 €). ¿Podría enviarme más información?';
+document.querySelectorAll('.wa-link').forEach(a=>a.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(MSG));
+
+// [file, caption, grid classes]
+const G={
+ baja:[
+  ['living','Salón a doble altura','c3 r3'],['kitchen','Cocina en roble y piedra','c3 r3'],
+  ['hall','Distribuidor y escalera','c2 r2'],['stair','Escalera y pasillo','c2 r2'],['hall-door','Puertas enrasadas','c2 r2'],
+  ['entry','Armarios del recibidor','c4 r2'],['powder','Aseo de cortesía','c2 r2']
+ ],
+ master:[
+  ['master','Dormitorio principal','c3 r3'],['master-vanity','Tocador','c3 r3'],
+  ['master-wardrobe','Armarios del dormitorio principal','c6 r2'],
+  ['walkin','Vestidor','c2 r2'],['master-hall','Acceso al vestidor','c2 r2'],['corridor-1','Pasillo de la planta primera','c2 r2'],
+  ['bath-double','Baño principal · doble lavabo en travertino','c2 r3'],['bath-wc','Baño principal','c2 r3'],['shower','Ducha en travertino','c2 r3']
+ ],
+ beds:[
+  ['green-1','Dormitorio · ambiente verde','c4 r2'],['green-2','Dormitorio · ambiente verde','c2 r2'],
+  ['green-desk','Zona de escritorio','c2 r2'],['blue-1','Dormitorio · ambiente azul','c4 r2'],
+  ['blue-2','Dormitorio · ambiente azul','c3 r3'],['bath-terrazzo','Baño en terrazo verde','c3 r3']
+ ],
+ sotano:[
+  ['cinema','Sala de cine','c6 r3'],
+  ['gym-1','Gimnasio','c3 r2'],['gym-2','Gimnasio con vistas al patio','c3 r2'],
+  ['lounge-1','Área de descanso privada','c4 r2'],['lounge-3','Área de descanso','c2 r2'],
+  ['boutique-1','Vestidor boutique','c2 r2'],['boutique-2','Vestidor boutique','c2 r2'],['laundry-2','Lavandería','c2 r2'],
+  ['laundry-1','Lavandería · frente de armarios','c6 r2']
+ ]
+};
+const DRAW=[['plan-parcela','Parcela y jardín'],['plan-sotano','Planta sótano'],['plan-baja','Planta baja'],['plan-primera','Planta primera'],['axo-1','Vista 3D · volumen'],['axo-2','Vista 3D · planta primera'],['axo-3','Vista 3D · planta baja'],['axo-4','Vista 3D · sótano'],['view-1','Vista 3D · fachada al jardín']];
+
+for(const [k,list] of Object.entries(G)){
+  const el=document.querySelector(`[data-g="${k}"]`);
+  el.innerHTML=list.map(([f,c,cl])=>`<figure class="${cl} zoom" data-full="img/${f}.jpg" data-cap="${c}"><img loading="lazy" src="img/s/${f}.jpg" alt="${c}"><figcaption>${c}</figcaption></figure>`).join('');
+}
+document.getElementById('draw').innerHTML=DRAW.map(([f,c])=>`<figure class="zoom" data-full="img/${f}.jpg" data-cap="${c}"><img loading="lazy" src="img/s/${f}.jpg" alt="${c}"><figcaption>${c}</figcaption></figure>`).join('');
+
+// lightbox: all zoomable items in page order
+const items=[...document.querySelectorAll('.zoom')];
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img'),lbp=lb.querySelector('p');
+let i=0;
+const show=()=>{const e=items[i];lbi.src=e.dataset.full||e.src;lbp.textContent=e.dataset.cap||''};
+items.forEach((e,n)=>e.addEventListener('click',()=>{i=n;show();lb.classList.add('on')}));
+const close=()=>lb.classList.remove('on');
+lb.querySelector('.x').onclick=close;
+lb.onclick=e=>{if(e.target===lb)close()};
+lb.querySelector('.prev').onclick=()=>{i=(i-1+items.length)%items.length;show()};
+lb.querySelector('.next').onclick=()=>{i=(i+1)%items.length;show()};
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')lb.querySelector('.prev').click();if(e.key==='ArrowRight')lb.querySelector('.next').click()});
+</script>
+</body>
+</html>
